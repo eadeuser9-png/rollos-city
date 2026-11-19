@@ -1,0 +1,70 @@
+:root{color-scheme:light;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#d4dfd2;color:#213f3b}
+*{box-sizing:border-box}body{margin:0;min-height:100dvh}.town-shell{height:100dvh;display:flex;flex-direction:column;position:relative;background:#91aba0;overflow:hidden}
+.town-top{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 22px;pointer-events:none}
+.town-brand,.town-details{pointer-events:auto;background:#f5f3e8ec;border:1px solid #d9decf;border-radius:16px;padding:13px 17px;box-shadow:0 9px 32px #30554b25;backdrop-filter:blur(14px)}
+.town-brand{max-width:min(410px,75vw)}.town-brand small{text-transform:uppercase;font-size:10px;letter-spacing:.19em;color:#688277;font-weight:700;display:block;margin-bottom:5px}
+.town-brand h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(20px,2.5vw,31px);letter-spacing:-.025em;margin:0 0 4px}.town-brand p{font-size:12px;margin:0;color:#617a6d;line-height:1.4}
+a{color:#285f58;text-decoration:none}a:hover{text-decoration:underline}
+.town-details{min-width:184px;text-align:right;font-size:12px;line-height:1.7;color:#506b60}.town-details strong{color:#214e43}
+#town-canvas{display:block;width:100%;height:100%;touch-action:none;outline-offset:-4px;cursor:grab}#town-canvas:active{cursor:grabbing}#town-canvas:focus-visible{outline:3px solid #eacc96}
+.town-bottom{position:absolute;z-index:6;left:16px;right:16px;bottom:16px;display:flex;align-items:flex-end;justify-content:space-between;gap:14px;pointer-events:none}
+.town-controls,.town-roster{pointer-events:auto;background:#f6f5eced;border:1px solid #dfe4d7;border-radius:16px;padding:12px 15px;box-shadow:0 8px 30px #334d4533;backdrop-filter:blur(15px)}
+.town-controls{display:flex;align-items:center;flex-wrap:wrap;gap:6px;max-width:min(750px,100%)}
+button,.button{font:600 12px system-ui;border:1px solid #cbd8cb;background:#f5f6ee;color:#426459;border-radius:10px;padding:9px 12px;cursor:pointer;white-space:nowrap}
+button[aria-pressed="true"]{background:#36665c;color:white;border-color:#36665c}button:hover{filter:brightness(.96)}button:focus-visible,a:focus-visible{outline:3px solid #b59a61;outline-offset:2px}
+#view-mode{font-size:11px;font-weight:700;color:#607b6c;margin-left:5px;white-space:nowrap}
+.town-roster{position:absolute;top:130px;right:18px;z-index:9;width:min(290px,32vw);font-size:12px;line-height:1.48;max-height:30vh;overflow:auto}
+.town-roster .eyebrow{text-transform:uppercase;letter-spacing:.12em;color:#81948b;font-size:9px;font-weight:800}
+.town-roster strong{display:block;font-size:15px;margin:3px 0 4px}.town-roster p{margin:0;color:#587166;font-size:12px}
+.town-directions{position:absolute;right:20px;bottom:155px;z-index:7;display:grid;grid-template-columns:repeat(3,40px);grid-template-rows:repeat(2,40px);gap:4px;pointer-events:auto;user-select:none;-webkit-user-select:none}
+.town-directions button{padding:0;font-size:20px;background:#f6f4eccc;border:1px solid #e3e5d9;border-radius:9px;touch-action:none}.town-directions button:nth-child(1){grid-column:2}.town-directions button:nth-child(2){grid-column:1;grid-row:2}.town-directions button:nth-child(3){grid-column:2;grid-row:2}.town-directions button:nth-child(4){grid-column:3;grid-row:2}
+.instructions{position:absolute;top:100px;left:22px;color:#f2f2e7;text-shadow:0 1px 5px #213e3c80;font-size:11px;font-weight:650;letter-spacing:.025em;pointer-events:none;max-width:430px}
+.town-places{position:absolute;top:154px;left:22px;z-index:12;max-width:min(275px,54vw);background:#f6f5ecf0;border:1px solid #dbe3d5;border-radius:13px;color:#285248;box-shadow:0 8px 24px #203b3438;overflow:hidden;font-size:12px}
+.town-places summary{cursor:pointer;list-style:none;padding:10px 13px;font-weight:750;user-select:none}
+.town-places summary::after{content:' ▾';color:#728b80}
+.town-places[open] summary::after{content:' ▴'}
+.town-places summary::-webkit-details-marker{display:none}
+.town-places nav{display:grid;grid-template-columns:1fr;gap:4px;overflow:auto;max-height:min(46vh,360px);padding:5px 8px 8px}
+.town-places .place-option{display:block;text-align:left;width:100%;white-space:normal;font-size:11px;padding:6px 9px;background:#eaf0e6;border-color:#d9e3d8}
+.town-places p{font-size:10px;color:#6f857c;margin:0;padding:5px 10px 10px;max-width:260px}
+@media(max-width:760px){.town-top{padding:10px}.town-brand{padding:10px 12px;max-width:70vw}.town-brand small{font-size:8px}.town-brand h1{font-size:20px}.town-brand p{font-size:10px}.town-details{padding:8px 10px;font-size:10px;min-width:100px}.instructions{top:90px;left:12px;font-size:10px;max-width:68vw}.town-bottom{bottom:9px;left:9px;right:9px;flex-direction:column-reverse;align-items:stretch;gap:7px}.town-controls{justify-content:center;width:100%;padding:8px;gap:4px}.town-controls button{padding:8px;font-size:11px}.town-roster{width:min(420px,100%);padding:8px 12px}.town-roster .eyebrow{font-size:8px}.town-roster strong{font-size:12px;margin:1px 0}.town-roster p{font-size:10px}#view-mode{display:none}.town-directions{right:12px;bottom:180px;grid-template-columns:repeat(3,42px);grid-template-rows:repeat(2,42px)}.town-directions button{font-size:19px}.instructions{top:100px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+
+/* Compact version of the same explorer on Rollo's homepage. */
+body.embedded .town-top,body.embedded .instructions,body.embedded .town-roster{display:none}
+body.embedded .town-bottom{left:8px;right:8px;bottom:9px;justify-content:center}
+body.embedded .town-controls{padding:6px 8px;gap:4px;max-width:100%;width:auto}
+body.embedded .town-controls button{padding:7px 9px}
+body.embedded .town-directions{right:12px;bottom:69px;grid-template-columns:repeat(3,36px);grid-template-rows:repeat(2,36px)}
+body.embedded .town-directions button{font-size:16px}
+@media(max-width:540px){body.embedded .town-controls{width:100%}body.embedded .town-bottom{bottom:5px}body.embedded .town-controls button{font-size:10px;padding:7px}body.embedded .town-directions{right:7px;bottom:56px;grid-template-columns:repeat(3,32px);grid-template-rows:repeat(2,32px)}}
+
+@media(max-width:760px){
+ .town-roster{top:112px;right:10px;width:min(190px,47vw);max-height:23vh;padding:9px 10px}
+ .town-places{top:128px;left:10px;max-width:min(180px,46vw)}
+ .town-places nav{max-height:37vh}
+ .town-places summary{padding:8px 9px;font-size:11px}
+ .town-directions{bottom:max(178px,env(safe-area-inset-bottom,0px) + 167px)}
+}
+@media(max-width:380px){.town-roster{top:120px;width:46vw}.town-places{top:185px;max-width:47vw}}
+
+body.embedded .town-places{top:10px;left:10px;max-width:195px}
+body.embedded .town-places nav{max-height:31vh}
+
+/* Help text sits above the controls instead of behind the title and activity card. */
+.instructions{top:auto;bottom:90px;left:22px;max-width:470px;background:#294b43bc;padding:6px 9px;border-radius:9px;color:#f3f5e8;text-shadow:none;line-height:1.45}
+@media(max-width:760px){.instructions{display:none}}
+
+/* V20: iPhone readable activity without overlap from Netlify floating UI. */
+@media(max-width:760px){
+ .town-roster{position:absolute;top:auto;left:10px;right:auto;bottom:calc(156px + env(safe-area-inset-bottom,0px));width:min(240px,62vw);max-height:27vh;overflow:auto;z-index:15;background:#fffdf3f7;box-shadow:0 4px 18px #27443c44}
+ .town-roster strong{font-size:13px;line-height:1.35;overflow-wrap:anywhere}
+ .town-roster p{font-size:11px;line-height:1.35;overflow-wrap:anywhere}
+ .town-bottom{bottom:calc(82px + env(safe-area-inset-bottom,0px));left:8px;right:8px}
+ .town-controls{max-width:100%;padding:6px 5px}
+ .town-controls button{font-size:10px;padding:7px 8px;flex:1}
+ .town-directions{right:9px;bottom:calc(174px + env(safe-area-inset-bottom,0px));grid-template-columns:repeat(3,38px);grid-template-rows:repeat(2,38px)}
+}
+@media(max-width:390px){.town-roster{bottom:calc(166px + env(safe-area-inset-bottom,0px));width:min(210px,59vw)}.town-directions{bottom:calc(180px + env(safe-area-inset-bottom,0px))}}
+/* Embedded explorer does not show the activity panel; its controls still avoid footer badges. */
+@media(max-width:760px){body.embedded .town-bottom{bottom:calc(67px + env(safe-area-inset-bottom,0px))}body.embedded .town-directions{bottom:calc(127px + env(safe-area-inset-bottom,0px))}}

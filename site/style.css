@@ -1,0 +1,188 @@
+:root{color-scheme:dark;--bg:#101d22;--glass:#182b32;--panel:#1f3239;--line:#3b5559;--faint:#879fa0;--ink:#eef1e6;--mint:#95d0b5;--tangerine:#e9ac77}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}.shell{max-width:1600px;margin:auto}.topbar{padding:19px 27px;display:flex;align-items:end;justify-content:space-between;gap:14px;background:#122227;border-bottom:1px solid #2e4b4e}.eyebrow{font-size:10px;color:#c6be9a;text-transform:uppercase;letter-spacing:.20em;font-weight:760}.topbar h1{margin:4px 0 0;font-size:clamp(25px,3vw,35px);line-height:1.1;font-weight:650;letter-spacing:-.045em}.light{color:#587c77;font-weight:400}.cityname{font-size:.72em;color:#b3c9c5}.status{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:#b8c9c4;font-weight:650}.status span:last-child{color:#ebc597;border:1px solid #5c5545;border-radius:999px;padding:5px 9px}.pulse{width:8px;height:8px;background:#a4d4ad;border-radius:50%;box-shadow:0 0 10px #a4d4ad}.grid{display:grid;grid-template-columns:minmax(0,1fr) 374px;min-height:calc(100dvh - 125px)}.scene-panel{position:relative;min-width:0;min-height:670px;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#264b53,#142a34 62%,#0c1b23 100%)}canvas{width:100%;height:100%;position:absolute;inset:0;touch-action:manipulation}.scene-bottom{position:absolute;bottom:14px;left:17px;right:17px;display:flex;align-items:center;justify-content:space-between;gap:8px;pointer-events:none;font-size:11px;color:#e9e7d7;text-shadow:0 2px 6px #000}.scene-bottom>*{pointer-events:auto}.scene-bottom span{padding:8px 10px;border-radius:9px;background:#183039bc;backdrop-filter:blur(5px)}button{border:1px solid #5a7573;background:#28444c;color:#eaf0e5;border-radius:9px;cursor:pointer;padding:8px 12px;font:600 12px/1.4 inherit;min-height:36px}button:hover{background:#386068}button:focus-visible,textarea:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.primary{background:#b9cfac;border-color:#b9cfac;color:#213335}.primary:hover{background:#d2e4c2}.controls-panel{background:#192a30;border-left:1px solid #315055;padding:19px 20px 12px;display:flex;flex-direction:column;gap:13px;min-width:0}.hero h2{font-size:25px;letter-spacing:-.05em;margin:1px 0}.pronouns{font-size:11px;color:#bccbc7;letter-spacing:0;font-weight:500;margin-left:6px}.hero p{margin:0;color:#b6c7c4;font-size:12px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.stats>div{padding:9px 10px;background:#243c42;border:1px solid #33525a;border-radius:10px;min-width:0}.stats small{display:block;color:#93ada9;font-size:10px;text-transform:uppercase;letter-spacing:.09em}.stats strong{display:block;font-size:13px;line-height:1.35;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.needgroup{display:grid;gap:7px}.need label{display:flex;justify-content:space-between;font-size:11px;color:#c7d6cf;margin-bottom:3px}.need b{font-weight:650}.track{background:#375257;height:5px;border-radius:20px;overflow:hidden}.level{height:100%;border-radius:20px;transition:width .3s}.hunger{background:#d39b70}.energy{background:#9bc69d}.curiosity{background:#93b7ca}.speech{background:#244046;border-radius:11px;padding:11px 13px;border-left:3px solid #ddb17b}.speech p{margin:6px 0 0;font-size:12px;line-height:1.55;color:#f4efdb;min-height:20px}.honest{letter-spacing:0;text-transform:none;opacity:.7}.tabs{display:grid;grid-template-columns:1fr 1.3fr 1fr;border:1px solid #3b5d60;border-radius:9px;padding:3px;gap:2px}.tabs button{border:0;background:transparent;padding:7px 4px;min-height:32px;font-size:11px}.tabs button[aria-selected=true]{background:#3d5d60;color:white}.sectionheader{display:flex;justify-content:space-between;align-items:center;gap:8px}.sectionheader h3{font-size:16px;margin:0;letter-spacing:-.025em}.chip{font-size:10px;color:#b1d1c0;border:1px solid #4b776a;padding:2px 7px;border-radius:20px}.tabpanel{min-height:280px}.tabpanel.hidden{display:none}.hinttext{font-size:11px;color:#9eb4b0;line-height:1.35;margin:4px 0 8px}.messages{min-height:125px;max-height:204px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;scrollbar-color:#466a6c transparent}.post{border:1px solid #38555a;background:#223941;border-radius:8px;padding:8px 10px}.post.user{background:#304238}.posthead{display:flex;align-items:center;justify-content:space-between;color:#a9c3b7;font-size:10px;margin-bottom:3px}.post p{margin:0;color:#e9eee4;font-size:12px;overflow-wrap:anywhere}#replyform{margin-top:9px;display:grid;gap:5px}#replyform label{font-size:11px;color:#b1c9c3}textarea{background:#17292f;border:1px solid #48646a;resize:vertical;border-radius:8px;min-height:54px;padding:9px;color:#fff;font:12px/1.45 system-ui}#replyform button{justify-self:end}.skill{margin:9px 0}.skillhead{display:flex;justify-content:space-between;gap:5px;font-size:12px}.skillhead span:last-child{color:#b7caaf;font-size:11px}.skilltrack{height:5px;background:#395459;border-radius:9px;overflow:hidden;margin-top:4px}.skillfill{height:100%;background:#9eb6a2}h4{font-size:12px;color:#ccd8c3;margin:16px 0 6px}#concepts{display:flex;gap:6px;flex-wrap:wrap}.concept{background:#304b49;border:1px solid #477069;border-radius:15px;padding:4px 8px;color:#dbe5d5;font-size:11px}.journal{max-height:290px;overflow-y:auto;margin-top:9px}.entry{border-bottom:1px solid #365057;padding:7px 0;color:#d5e0da;font-size:12px}.entry small{display:block;color:#8fa7a1;font-size:10px}.actions{display:flex;gap:8px}.actions button{flex:1}.foot{font-size:10px;color:#94ada9;border-top:1px solid #355057;padding-top:9px}.sitefoot{padding:10px 20px;text-align:center;font-size:10px;color:#9bb7b0;background:#102025;border-top:1px solid #29434b}@media(max-width:960px){.grid{grid-template-columns:1fr}.scene-panel{min-height:0;height: min(64dvh,650px)}.controls-panel{border-left:0;border-top:1px solid #315055}.topbar{padding:14px 15px}.sitefoot{font-size:9px}.status{justify-content:flex-end}}@media(max-width:480px){.topbar h1{font-size:23px}.topbar .eyebrow{font-size:8px}.status{font-size:10px;gap:5px}.topbar{align-items:center}.status .pulse{display:none}.status span:last-child{padding:4px 6px}.scene-panel{height:51dvh;min-height:350px}.scene-bottom span{font-size:9px}.controls-panel{padding:15px 14px}.messages{max-height:230px}}
+
+/* Soft daylight edition: low-clutter, low-cost mobile rendering. */
+:root {color-scheme:light;--bg:#b6c7bf;--glass:#c0cbc2;--panel:#d5dbd2;--line:#9dafa5;--faint:#607974;--ink:#263c3c;--mint:#62897c;--tangerine:#ab7659}
+body{background:#b6c7bf;color:#263c3c}
+.topbar{background:#b6c6bd;border-bottom-color:#94aca1}
+.eyebrow{color:#596e61}.light{color:#658780}.cityname{color:#405f59}
+.status{color:#395850}.status span:last-child{color:#5e543f;border-color:#9eac98}
+.pulse{background:#598a74;box-shadow:none}
+.scene-panel{background:#adc2bf}
+.scene-bottom{color:#eaf2ea;text-shadow:none}
+.scene-bottom span{background:#344c4bce;backdrop-filter:none}
+button{background:#b3c6bc;border-color:#8ba69b;color:#26423e}
+button:hover{background:#a5bcb0}
+button:focus-visible,textarea:focus-visible{outline-color:#4c7e70}
+.primary{background:#8eab96;border-color:#8eab96;color:#192f2c}
+.primary:hover{background:#a3c1aa}
+.controls-panel{background:#d5dbd2;border-color:#9db1a5}
+.hero .pronouns,.hero p{color:#526c63}
+.stats>div{background:#c2d0c5;border-color:#a6b8aa}
+.stats small{color:#5b736c}
+.need label{color:#405c55}.track{background:#a8b9ae}
+.hunger{background:#b58b68}.energy{background:#6e9479}.curiosity{background:#718f9a}
+.speech{background:#bbcfc4;border-left-color:#ac805f}
+.speech p{color:#274743}
+.tabs{border-color:#9bafa4}.tabs button[aria-selected=true]{background:#97b5a5;color:#263e36}
+.chip{color:#44665c;border-color:#95ae9c}
+.hinttext{color:#5e776e}.messages{scrollbar-color:#a3b7aa transparent}
+.post{background:#c3d2c8;border-color:#9bb2a6}.post.user{background:#b4cab6}
+.posthead{color:#526d60}.post p{color:#2d4d46}
+#replyform label{color:#536f64}
+textarea{background:#e2e5db;color:#26443f;border-color:#9bb0a6}
+textarea::placeholder{color:#71857b}
+.skillhead span:last-child{color:#4b6656}
+.skilltrack{background:#aec1b2}.skillfill{background:#658e78}
+h4{color:#506c61}.concept{background:#bdcec0;border-color:#96ac9d;color:#2f5246}
+.entry{border-color:#adc0b4;color:#35524a}.entry small{color:#6b8277}
+.foot{color:#5f766e;border-color:#adbdaf}
+.sitefoot{color:#60766a;background:#b7c6bc;border-color:#9fb1a5}
+@media(max-width:960px){.controls-panel{border-top-color:#9db1a5}}
+
+.economy-note{font-size:11px;line-height:1.5;color:#436158;background:#c4d3c7;border:1px solid #a3b7a7;border-radius:10px;padding:9px 11px}.economy-note b{font-weight:700}
+
+.owner-link{display:flex;flex-wrap:wrap;justify-content:space-between;gap:5px;align-items:center;font-size:11px}.owner-link a{color:#285b50;font-weight:700}.owner-link span{color:#5e776e;font-size:10px}
+/* Keep the daily economy visible without truncation on phones. */
+.stats strong{white-space:normal;overflow:visible;text-overflow:clip}
+
+/* Rollo: readable reflections and restrained excitement, no visual clutter. */
+.spark{background:#c39466}.focus-note{padding:9px 11px;background:#c1d0c5;border:1px solid #a1b8a9;border-radius:8px;color:#3c6353;font-size:12px}.interest{padding:5px 0}.interest strong{font-size:12px}.journal{max-height:400px}.entry{padding:13px 0}.entry p{margin:6px 0 2px;line-height:1.65;font-size:12px}.journal-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}.journal-tag{border:1px solid #a5b6a5;border-radius:20px;font-size:9px;color:#5b725e;padding:2px 7px}.tabpanel #export{margin-top:11px}.scene-bottom{font-size:10px}
+
+.project-list{display:grid;gap:4px}.mini-note{font-size:11px;background:#c4d2c6;color:#3c5b50;padding:7px 9px;margin:0;border-radius:7px;line-height:1.5}
+
+/* v6: low-clutter street-follow camera, accessible zoom controls. */
+#scene{touch-action:none}
+.camera-controls{position:absolute;top:13px;left:13px;display:flex;align-items:center;gap:5px;background:#d7e2d9e8;border:1px solid #97aaa1;border-radius:12px;padding:5px;box-shadow:0 3px 14px #354d4733;z-index:2}
+.camera-controls button{font-size:12px;min-height:34px;padding:6px 10px;background:#ecf0e8;color:#27463e;border:1px solid #a8b9af}
+.camera-controls button:disabled{opacity:.4;cursor:default}
+.camera-controls #zoom-in,.camera-controls #zoom-out{width:34px;padding:4px;font-size:18px}
+#zoom-level{font-size:10px;min-width:36px;text-align:center;color:#486257;font-weight:700;font-variant-numeric:tabular-nums}
+@media(max-width:480px){.camera-controls{top:9px;left:9px}.camera-controls button{font-size:11px}.scene-bottom{bottom:9px;left:9px;right:9px}.scene-bottom span{max-width:66%;font-size:9px}}
+
+/* v7 expandable, lightweight city editor */
+.builder{margin:12px 0;padding:12px;border:1px solid #9bad9f;border-radius:10px;background:#dce7dd;color:#263e36}
+.builder summary{cursor:pointer;font-weight:750;font-size:13px}
+.builder-form{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}
+.builder-form label{grid-column:1 / -1;font-size:11px;font-weight:700}
+.builder-form input,.builder-form select{min-width:0;max-width:100%;box-sizing:border-box;border-radius:7px;border:1px solid #a8b9ac;background:#f8faf5;color:#253e35;padding:9px;font-size:14px}
+.builder-form input#placename,.builder-form select,.builder-form button{grid-column:1/-1}
+.builder #custom-places{font-size:12px;line-height:1.5;padding-left:18px;color:#375247}
+.builder button{font-size:12px}
+.scene-bottom #speed:disabled{opacity:.8}
+
+/* v8: learning as the centerpiece, compact enough for phones */
+.learning-current{padding:14px;border:1px solid #9fb8ac;background:#dce8da;border-radius:13px;margin:12px 0 12px;color:#2b4a43}
+.learning-current strong{display:block;font-size:17px;line-height:1.35;margin:5px 0 4px}
+.learning-current p{font-size:12px;line-height:1.5;margin:7px 0 10px}
+.learning-label{letter-spacing:.13em;text-transform:uppercase;font-size:9px;font-weight:800;color:#668075}
+.learning-next{padding:7px 10px;border-radius:8px;background:#bdd5c5;color:#365b4b;font-size:11px;font-weight:600}
+.learning-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 0 16px}
+.learning-stats span{border:1px solid #aabdae;border-radius:8px;padding:8px 7px;font-size:10px;line-height:1.35;color:#566c61;text-align:center}
+.learning-stats b{font-size:18px;color:#365a48;display:block}
+.learning-trail{display:grid;gap:10px;margin:9px 0 14px}
+.learning-item{border-left:3px solid #8aa58d;background:#edf1e6;border-radius:0 9px 9px 0;padding:11px 12px;color:#435c51}
+.learning-item .learning-when{font-size:10px;color:#6d8475;letter-spacing:.025em;margin-bottom:4px}
+.learning-item strong{display:block;font-size:12px;margin-bottom:4px;color:#28473b}
+.learning-item p{font-size:12px;margin:5px 0;line-height:1.48}
+.learning-item .learning-question{font-style:italic;color:#476957}
+@media(max-width:480px){.learning-current strong{font-size:15px}.learning-stats{gap:4px}.learning-stats span{font-size:9px;padding:8px 3px}.learning-stats b{font-size:15px}}
+/* Version 10: small, mobile-friendly galleries; no heavy 3D assets. */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin:10px 0 20px}
+.gallery-item{min-width:0;display:flex;flex-direction:column;gap:5px;padding:10px;border:1px solid #b8c6bc;border-radius:10px;background:#f4f4ec}
+.gallery-item img{width:100%;height:125px;object-fit:contain;border-radius:6px;background:#e4e6d9}
+.gallery-item strong{font-size:.91rem;color:#2d4440}
+.gallery-item small{font-size:.76rem;color:#557069;overflow-wrap:anywhere}
+#photoform input[type=file]{width:100%;max-width:100%}
+
+/* Rollo's drawing viewer, shared by the city gallery, art shop, and owner studio. */
+.rollo-art-preview{appearance:none;display:block;width:100%;padding:0;margin:0;border:0;border-radius:8px;background:transparent;cursor:zoom-in;color:inherit;text-align:inherit}
+.rollo-art-preview img{display:block;width:100%;height:100%;object-fit:contain;border-radius:6px}
+.rollo-art-preview:focus-visible{outline:3px solid #255d51;outline-offset:3px}
+.gallery-item .rollo-art-preview{height:125px;background:#e4e6d9}
+.rollo-art-viewer{position:fixed;inset:0;margin:auto;width:min(92vw,1050px);max-width:92vw;max-height:94vh;padding:0;border:1px solid #a5b8a9;border-radius:16px;background:#f9faf6;color:#213d35;box-shadow:0 22px 90px #061f1690}
+.rollo-art-viewer::backdrop{background:#0e241cd4;backdrop-filter:blur(2px)}
+.rollo-art-viewer-frame{padding:16px 18px 22px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.rollo-art-viewer-frame h2{font-size:1.2rem;line-height:1.3;margin:2px 0;text-align:center}
+.rollo-art-viewer-frame p{margin:0;font-size:.88rem;color:#526b61;text-align:center}
+.rollo-art-viewer-frame img{display:block;width:auto;max-width:100%;max-height:min(68vh,830px);height:auto;min-height:100px;object-fit:contain;background:#e5e9e1;border-radius:10px}
+.rollo-art-viewer-close{align-self:flex-end;padding:9px 14px;border:1px solid #a5b8a9;border-radius:9px;background:#ecf1eb;cursor:pointer}
+.rollo-art-viewer-frame a{padding:6px 0;color:#28584d}
+@media(max-width:580px){.rollo-art-viewer{width:96vw;max-width:96vw}.rollo-art-viewer-frame{padding:12px}.rollo-art-viewer-frame img{max-height:61vh}}
+
+/* V15: direct navigation in the isometric city for Mac and touchscreens. */
+#scene{touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none;outline-offset:-3px}
+#scene:active{cursor:grabbing}
+#scene:focus-visible{outline:3px solid #3d7d65}
+.camera-controls{max-width:calc(100% - 16px);flex-wrap:wrap}
+.scene-bottom span{max-width:min(75%,390px);line-height:1.35}
+@media(max-width:480px){.scene-bottom span{max-width:72%}}
+
+
+/* Town-first homepage: keep world mechanics accessible but not on display. */
+.scene-bottom #speed{display:none!important}
+.quiet-metric{display:none!important}
+.now-card{padding:13px 14px;border:1px solid #a4b9a9;background:#c1d0c4;border-radius:12px;display:flex;flex-direction:column;gap:4px}
+.now-card small{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#587365;font-weight:700}
+.now-card strong{font-size:15px;line-height:1.45;color:#26483b;font-weight:660}
+.hero h2{font-size:23px;margin:0 0 5px}.hero p{font-size:12px;line-height:1.5}
+.speech{margin:0}.tabs{margin-top:2px}
+.quiet-details{border-top:1px solid #a8baaf;padding:8px 0;margin-top:4px;color:#35594d}
+.quiet-details summary{cursor:pointer;font-size:11px;font-weight:650;color:#506d5c;list-style-position:inside;padding:5px 0}
+.quiet-details summary:hover{color:#254b3e}
+.details-inner{display:grid;gap:10px;padding:10px 3px 4px}
+.details-inner p{font-size:11px;line-height:1.55;margin:0;color:#526c61}
+.details-inner .stats{margin:0}
+.details-inner .garden-note{font-size:11px;padding:10px;background:#c7d6c7;border-radius:9px;border:1px solid #adc0b0}
+.details-inner .garden-note p{font-size:11px;margin:0 0 4px}
+.details-inner .needgroup{padding:4px 0}
+.details-inner .foot{margin-top:5px}
+.site-notes .actions{padding-top:5px}
+.town-links{display:flex;gap:8px;flex-wrap:wrap;padding:8px 0 2px}
+.town-links a{font-size:12px;color:#2e6350;text-decoration:none;border:1px solid #aac0af;background:#c3d6c6;border-radius:9px;padding:8px 11px;font-weight:680}
+.town-links a:hover,.town-links a:focus-visible{background:#b5cdbb;text-decoration:underline}
+#tab-learning .hinttext{line-height:1.55}
+#tab-learning .learning-current{margin-top:9px}
+#tab-learning .learning-trail{margin-top:9px}
+#tab-learning .learning-label{letter-spacing:.08em;text-transform:none;font-size:11px}
+.sitefoot{font-size:10px;line-height:1.6;padding:13px 20px}
+@media(max-width:480px){.town-links a{flex:1;text-align:center;padding:9px 7px}.controls-panel{gap:11px}}
+
+/* Interests read like a collection, not a laboratory dashboard. */
+#interests,#skills{display:flex;flex-wrap:wrap;gap:7px;padding:8px 0}
+.interest-tag{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #abc0ac;background:#c7d9c9;border-radius:999px;color:#315745;font-size:12px;font-weight:630}
+
+/* Consolidated edition: the larger navigable low-poly town replaces the old fixed map. */
+.scene-panel #scene,.scene-panel .camera-controls,.scene-panel .scene-bottom{display:none!important}
+.town-embed{display:block;position:absolute;inset:0;width:100%;height:100%;border:0;background:#a6c9be}
+.town-expand{position:absolute;z-index:3;top:13px;left:13px;border:1px solid #e7e9d8;background:#f8f4e8f0;backdrop-filter:blur(5px);padding:9px 12px;border-radius:12px;font:700 12px system-ui;color:#2d5e53;text-decoration:none;box-shadow:0 6px 20px #2b48312f}
+.town-expand:hover{background:#fff8e8;text-decoration:none}
+.explore-cta a{display:inline-block;border:1px solid #8caf9f;border-radius:10px;padding:8px 11px;background:#ecf0e6;color:#2c6557;font-size:12px;font-weight:750;text-decoration:none}
+.explore-cta{margin:9px 0 3px!important}
+@media(max-width:960px){.scene-panel{height:65dvh;min-height:450px}}
+@media(max-width:480px){.scene-panel{height:56dvh;min-height:395px}.town-expand{font-size:10px;padding:7px 9px;top:8px;left:8px}}
+
+/* V20: reserve bottom-right phone screen space for deployment platform overlays. */
+@media(max-width:600px){.scene-panel{isolation:isolate}.town-expand{bottom:calc(68px + env(safe-area-inset-bottom,0px))!important;right:14px!important;max-width:calc(100% - 28px)}.controls-panel{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}}
+
+/* V20.1: mobile town link must have ONE vertical and horizontal anchor.
+   Previous mobile rule set bottom/right without clearing top/left, stretching it
+   into a massive overlay on iPhones. */
+@media (max-width:600px){
+  .town-expand{
+    top:auto!important;left:auto!important;
+    bottom:calc(18px + env(safe-area-inset-bottom,0px))!important;
+    right:14px!important;
+    width:max-content;max-width:calc(100% - 28px);height:auto;
+    display:inline-flex;align-items:center;justify-content:center;
+    padding:10px 13px;font-size:14px;line-height:1.25;font-weight:700;
+    white-space:normal;text-align:center;
+  }
+}
+
+/* V22: iPhone PWA status-bar-safe pages and an unobstructed lower footer area.
+   The Netlify badge is a host overlay and cannot be moved by website CSS. */
+@media(max-width:700px){
+ body:not(:has(.library-shell)){padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+ .sitefoot{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+ .owner-layout{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+}

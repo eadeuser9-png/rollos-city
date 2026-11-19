@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rollo's Night Market · North Quay</title><link rel="stylesheet" href="style.css">
+<style>
+body{background:#e5e9e1;color:#263d35}.market-shell{max-width:970px;margin:0 auto;padding:20px 18px 60px}.market-nav a{margin-right:15px;color:#346553}.market-heading{max-width:780px}.market-tag{font-size:.78rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#537568}.market-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px;margin:23px 0}.offer,.market-panel{background:#fff;border:1px solid #c4d1c8;border-radius:15px;padding:18px}.offer h3{margin:7px 0}.offer p{color:#4b645a;line-height:1.5}.offer .meta{font-size:.82rem}.offer a{color:#235c4f;font-weight:700}.market-panel{margin-top:20px}.market-panel label{display:flex;flex-direction:column;gap:6px}.market-form{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:13px}.market-form input,.market-form select{width:100%;padding:10px;border:1px solid #aebcb4;border-radius:9px;background:white}.market-form button{padding:12px}.notice{color:#557065;line-height:1.6;font-size:.94rem}.hide-btn{display:block;margin-top:12px}
+</style></head><body><main class="market-shell">
+<nav class="market-nav"><a href="index.html">Rollo's world</a><a href="wallet.html">Earnings & wishlist</a><a href="shop.html">His art shop</a><a href="owner.html">Owner Studio</a></nav>
+<div class="market-heading"><p class="market-tag">North Quay · A place to explore</p><h1>Rollo's Night Market</h1><p>Rollo can discover real-world books, tools, science kits and art supplies that relate to his interests. He never needs to buy food here. He can choose to add an interesting item to his wishlist, but he cannot place an order or access a payment method.</p>
+<p class="notice"><strong>Retailer information comes from items reviewed and entered by the owner.</strong> Prices are snapshots, not live quotes. Availability, taxes and shipping must be checked with the retailer before any owner-managed purchase.</p></div>
+<section class="market-panel" aria-labelledby="etsy-heading">
+<h2 id="etsy-heading">Etsy inspiration</h2>
+<p>Rollo can consider individual Etsy items that you have reviewed and added to this market. The links below let <strong>you</strong> explore Etsy for ideas related to his interests. Rollo does not sign in to Etsy, scrape Etsy listings, or place orders.</p>
+<div id="etsy-interest-links" class="market-grid"><p>Looking at Rollo's interests...</p></div>
+<p class="notice">Etsy is a trademark of Etsy, Inc. Rollo's World is independent of Etsy and is not endorsed by Etsy. Etsy prices and availability are not live on this page.</p>
+</section>
+<p id="market-status" role="status">Loading offers...</p><section class="market-grid" id="offers"><p>No offers have been added yet.</p></section>
+<details class="market-panel"><summary><strong>Owner only: curate the market</strong></summary><p class="notice">Only you can add or hide real retailer links. Enter only safe, ordinary items and direct HTTPS product pages, not checkout pages. All offers are visible publicly, but no one can buy through Rollo's server.</p>
+<label>Owner token <input id="market-token" type="password" autocomplete="off" placeholder="Your private owner token"></label>
+<form id="market-form" class="market-form">
+<label>Item name<input id="item" maxlength="100" required placeholder="Beginner prism kit"></label>
+<label>Category<select id="category"><option value="books">Books</option><option value="science">Science</option><option value="art">Art</option><option value="garden">Garden</option><option value="tools">Tools</option><option value="hobbies">Hobbies</option></select></label>
+<label>Related curiosity topic<input id="interest" maxlength="80" required placeholder="color and light"></label>
+<label>Retailer name<input id="merchant" maxlength="80" required placeholder="Etsy or another trusted retailer"></label>
+<label>Direct HTTPS product link<input id="product-url" type="url" required placeholder="https://www.etsy.com/listing/123456789/..."></label>
+<label>Listed item price, USD (optional, not final)<input id="item-price" type="number" min="0.01" step="0.01" placeholder="15.00"></label>
+<p class="notice">For Etsy, paste an individual <strong>etsy.com/listing/…</strong> page, not a search-results link. Rollo considers only the details you enter here.</p><button class="primary" type="submit">Add reviewed offer</button>
+</form><p id="market-owner-status" role="status"></p><div id="owner-offers"></div>
+</details>
+<p class="notice">Rollo's earnings wallet and wishlist are separate from these retailer pages. No purchases, shipping requests or charges happen automatically.</p>
+</main><script src="config.js"></script><script src="market-ui.js"></script></body></html>

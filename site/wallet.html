@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b6c6bd">
+<title>Rollo's wallet & wishlist · North Quay</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body{background:#e5e9e1;color:#263d35} .wallet-shell{max-width:920px;margin:0 auto;padding:16px 20px 48px}
+.wallet-header{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.wallet-tag{letter-spacing:.08em;text-transform:uppercase;color:#5c796d;font-size:.72rem;font-weight:700}
+.wallet-intro{max-width:660px;color:#4d665b;line-height:1.6}
+.wallet-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:25px 0}
+.wallet-stat,.wallet-panel{background:#fff;border:1px solid #c4d1c8;border-radius:15px;padding:18px}
+.wallet-stat strong{font-size:1.8rem;display:block;line-height:1.5;font-variant-numeric:tabular-nums}
+.wallet-stat small{color:#5d756b}
+.wallet-panel{margin-top:15px}.wallet-panel h2{margin-top:0}
+.wish-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.wish{background:#f7faf7;border:1px solid #d4e0d7;border-radius:12px;padding:16px;min-height:140px}
+.wish strong{display:block;font-size:1.03rem;margin-bottom:5px}
+.wish p{color:#526c60;line-height:1.45}
+.wish .topic{font-size:.76rem;text-transform:uppercase;letter-spacing:.07em;color:#5f8172}
+.wallet-note{font-size:.89rem;color:#54695e;line-height:1.6}
+.wallet-nav a{color:#2f6257;margin-right:15px}
+</style>
+</head>
+<body><main class="wallet-shell">
+<div class="wallet-header"><div><p class="wallet-tag">North Quay · Real-world finances</p><h1>Rollo's earnings & wishlist</h1></div><nav class="wallet-nav"><a href="index.html">World</a><a href="shop.html">Art shop</a><a href="market.html">Night market</a><a href="owner.html">Owner studio</a></nav></div>
+<p class="wallet-intro">Rollo has no fictional coins. Money can enter this wallet only through real, verified sales of his artwork. The owner must reconcile net payouts before those earnings can support a wish.</p>
+<div id="wallet-message" role="status" class="wallet-note">Checking his cloud wallet...</div>
+<div class="wallet-stats">
+<div class="wallet-stat"><small>Available from cleared art earnings</small><strong id="available">$0.00</strong><small>After any held or recorded purchases</small></div>
+<div class="wallet-stat"><small>Verified artwork sales, gross</small><strong id="gross">$0.00</strong><small>Not necessarily paid out yet</small></div>
+<div class="wallet-stat"><small>Cleared payouts reconciled by owner</small><strong id="cleared">$0.00</strong><small>Net funds received, after fees</small></div>
+</div>
+<section class="wallet-panel"><h2>What Rollo hopes to get</h2><p class="wallet-note">His ideas grow out of his strongest interests. These are not live product listings, and he does not have permission to purchase anything.</p><div id="wishes" class="wish-grid"><p>No wishes yet.</p></div></section>
+<section class="wallet-panel"><h2>How he earns real money</h2><p class="wallet-note">You can browse <a href="shop.html">his original drawings</a>. Purchases are handled by the seller's Stripe checkout, not Rollo's website. His wallet only counts payments verified through the approved Stripe webhook. His owner manages fulfillment, refunds and payout reconciliation.</p><p class="wallet-note">No personal address, banking information or payment method is visible to Rollo or visitors. No purchases happen automatically.</p></section>
+</main><script src="config.js"></script><script src="wallet-ui.js"></script></body></html>

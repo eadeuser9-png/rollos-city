@@ -1,0 +1,21 @@
+// EXAMPLE ONLY, not an active configuration. Use your existing wrangler.jsonc.
+// Do not place OWNER_TOKEN, WORLD_ADMIN_TOKEN, Stripe keys or VISITOR_RATE_SECRET here.
+{
+  "name": "rollo-city-brain",
+  "main": "worker.js",
+  "compatibility_date": "2026-11-01",
+  "triggers": {"crons": ["* * * * *"]},
+  "vars": {
+    "SITE_ORIGIN": "https://REPLACE_WITH_YOUR_EXISTING_NETLIFY_SITE.netlify.app",
+    "AI_DECISIONS": "true",
+    "AI_THOUGHTS": "true",
+    "AI_FORUM_REPLIES": "false",
+    "AI_CREATOR_CHAT": "true",
+    "VISITOR_SUBMISSIONS": "false",
+    "REAL_PURCHASES_ENABLED": "false",
+    "PRINT_STORE_SYNC_ENABLED": "false"
+  },
+  "d1_databases": [{"binding": "DB", "database_name": "rollo-city-db", "database_id": "REPLACE_WITH_YOUR_EXISTING_D1_DATABASE_ID"}],
+  "ai": {"binding": "AI"},
+  "r2_buckets": [{"binding": "PHOTOS", "bucket_name": "REPLACE_WITH_YOUR_EXISTING_PHOTO_BUCKET"}]
+}

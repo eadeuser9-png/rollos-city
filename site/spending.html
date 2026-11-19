@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#b6c6bd"><title>Rollo · Owner Spending Controls</title><link rel="stylesheet" href="spending.css"></head>
+<body>
+<main>
+  <p class="eyebrow">Private owner controls</p>
+  <h1>Rollo's spending safeguards</h1>
+  <p><a href="index.html">← Back to North Quay</a></p>
+  <div class="notice"><strong>No real payment functionality is connected.</strong> These forms create and approve requests for your review only. Approval never charges an account.</div>
+  <section><h2>Connect to your private backend</h2><p class="muted">Deploy the included Cloudflare Worker first and put its URL in <code>config.js</code>. Enter your secret owner token here. The token is held in memory until you close or reload this page, not saved to storage.</p>
+  <label>Owner token <input id="token" type="password" autocomplete="off" placeholder="Cloudflare OWNER_TOKEN"></label>
+  <button id="refresh">Check safeguards and pending requests</button>
+  <p id="status" role="status">Not connected</p></section>
+  <section><h2>Safety settings</h2><div id="settings">Not loaded yet.</div><p class="muted">Limits and merchant permissions are enforced by the backend. You cannot bypass them by editing this page.</p></section>
+  <section><h2>Propose a purchase</h2><p class="muted">Use this to test the approval queue; Rollo cannot spend real money.</p>
+    <form id="proposal"><label>Merchant <input id="vendor" required maxlength="80" placeholder="Exact allowed merchant name"></label>
+      <label>Item / purpose <input id="item" required maxlength="160" placeholder="Describe the proposed purchase"></label>
+      <label>Price in USD <input id="price" type="number" required min="0.01" step="0.01" placeholder="5.00"></label>
+      <button type="submit">Create pending request</button></form></section>
+  <section><h2>Requests awaiting your review</h2><div id="requests">Sign in and refresh to see requests.</div></section>
+  <p class="fineprint">If you ever connect a processor, implement a separate, authenticated payment execution step that re-checks the limits and your explicit authorization. Do not store banking credentials in these files.</p>
+</main>
+<script src="config.js"></script><script src="spending.js"></script>
+</body></html>

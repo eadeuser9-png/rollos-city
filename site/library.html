@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="theme-color" content="#b6c6bd"/>
+<title>North Quay Library · Rollo's City</title>
+<link rel="stylesheet" href="style.css?v=23"/>
+<style>
+.library-shell{max-width:1040px;margin:0 auto;padding:calc(38px + env(safe-area-inset-top,0px)) 18px calc(95px + env(safe-area-inset-bottom,0px));color:#263c37}
+.library-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.library-top h1{font-size:clamp(26px,4vw,40px);margin:10px 0 8px}
+.library-top a{color:#20594a;font-weight:600}
+.library-lead{max-width:640px;line-height:1.6;color:#4b655c}
+.library-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(290px,.9fr);gap:28px}
+.library-pane{background:rgba(255,255,255,.68);border:1px solid #c7d6ca;border-radius:16px;padding:20px;min-width:0}
+.library-pane h2{margin:0 0 14px;font-size:20px}
+.library-book{border-top:1px solid #d4dfd6;padding:15px 0;display:flex;flex-direction:column;gap:4px}
+.library-book strong{font-size:16px;line-height:1.4}
+.library-book small{color:#586b63}
+.library-book a,.reading-entry a{color:#25644f}
+.reading-entry{padding:17px 0;border-top:1px solid #d4dfd6}
+.reading-entry h3{font-size:16px;margin:3px 0 8px}
+.reading-entry small{color:#61786b}
+.reading-entry blockquote{margin:12px 0;border-left:3px solid #a6bdae;padding-left:12px;font-size:14px;line-height:1.6;color:#3b5147;white-space:pre-line;max-height:165px;overflow:auto}
+.reading-entry .thought{font-weight:600;font-size:14px;line-height:1.5}
+.library-search{display:flex;gap:8px;margin:12px 0}
+.library-search input{min-width:0;flex:1;padding:10px;border:1px solid #adbfaf;border-radius:8px;background:#fff}
+.library-search button,.library-owner button{border-radius:8px;border:0;background:#326854;color:white;padding:9px 14px;cursor:pointer}
+.library-owner{margin-top:12px;background:#f2f7f1;padding:16px;border-radius:12px}
+.library-owner input,.library-owner textarea{display:block;width:100%;box-sizing:border-box;margin:7px 0 12px;border:1px solid #a4b4a8;padding:10px;border-radius:8px}
+.library-muted{font-size:13px;line-height:1.5;color:#576d61}
+.library-status{min-height:0;color:#35554b}.library-status:empty{display:none}.reading-insight{padding:12px 13px;border-radius:9px;background:#edf2e9;margin:12px 0;color:#2b4e40}.reading-insight p{margin:7px 0}.reading-insight small{line-height:1.5;display:block;overflow-wrap:anywhere}.library-owner summary{cursor:pointer;font-weight:650}
+.book-suggest-panel{background:#f4f8f3;border:1px solid #bad4c5;padding:16px;border-radius:12px;margin-top:19px}
+.book-suggest-panel h2{margin:0 0 8px}.book-suggest-panel label{display:block;margin:10px 0 0;font-size:14px;font-weight:600}
+.book-suggest-panel input,.book-suggest-panel textarea{display:block;width:100%;box-sizing:border-box;margin-top:5px;padding:10px;border:1px solid #a4b4a8;border-radius:8px;font:inherit;background:#fff}
+.book-suggest-panel button{border:0;border-radius:9px;background:#326854;color:white;padding:11px 16px;margin-top:12px;font:inherit;cursor:pointer}
+.book-suggest-panel button:disabled{opacity:.55;cursor:not-allowed}
+.suggest-book-entries article{padding:9px 0;border-bottom:1px solid #d2ddd3}
+.suggest-book-entries small{display:block;color:#586b63;margin-top:3px}
+.library-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.library-shell a{overflow-wrap:anywhere}
+@media(max-width:750px){.library-layout{grid-template-columns:1fr;gap:14px}.library-shell{padding:calc(30px + env(safe-area-inset-top,0px)) 12px calc(100px + env(safe-area-inset-bottom,0px))}.library-pane{padding:17px}.library-search{margin:9px 0}.library-top{margin-bottom:14px}.library-top h1{margin-top:12px}}
+@media (display-mode:standalone){body::before{content:"";position:fixed;top:0;left:0;right:0;height:env(safe-area-inset-top,0px);background:#b6c6bd;z-index:999;pointer-events:none}}
+</style></head><body><div class="library-shell">
+<header class="library-top"><div><a href="index.html">← Back to North Quay</a><h1>North Quay Library</h1>
+<p class="library-lead">A quiet place for Rollo to find books and follow his curiosity. He can choose what to read, return to a book later, and remember the passages he has explored.</p></div></header>
+<div class="library-layout">
+<section class="library-pane" aria-label="Rollo's books"><h2>Books on the shelves</h2><p class="library-muted">These are real books and documents. Starter titles are public-domain works, but you can also add permitted plain-text books from other sources. Rollo independently chooses what to read during his library visits.</p><div id="library-books"><p>Opening the shelves…</p></div>
+<hr/><h2>Search Project Gutenberg</h2><p class="library-muted">Browse the catalog. Rollo needs a readable copy added to his shelf before he can study a new book.</p>
+<form class="library-search" id="library-search"><input id="library-query" required minlength="2" maxlength="70" placeholder="Title or author" aria-label="Find a book"/><button type="submit">Search</button></form>
+<div id="library-search-results" class="library-status" aria-live="polite"></div>
+<section class="book-suggest-panel" aria-label="Suggest a book for Rollo"><h2>Suggest a book to Rollo</h2>
+<p class="library-muted">Anyone can recommend a book, but the owner reviews every suggestion first. You are recommending a title, not uploading its content. Approval does not require Rollo to read it. He will only be able to read a permitted text copy that the owner adds.</p>
+<form id="book-suggestion-form">
+<label for="suggest-title">Book title<input id="suggest-title" maxlength="120" required minlength="3" placeholder="What should Rollo discover?"></label>
+<label for="suggest-author">Author (optional)<input id="suggest-author" maxlength="100" placeholder="Author name"></label>
+<label for="suggest-reason">Why might Rollo find it interesting?<textarea id="suggest-reason" maxlength="360" minlength="5" required rows="3" placeholder="What made you think of this book?"></textarea></label>
+<label for="suggest-url">Where to find it (optional public HTTPS URL)<input id="suggest-url" type="url" maxlength="450" placeholder="https://example.org/book"></label>
+<div class="library-honeypot" aria-hidden="true"><label>Leave blank<input id="suggest-website" tabindex="-1" autocomplete="off"></label></div>
+<button type="submit">Send suggestion for approval</button></form>
+<p class="library-muted" data-visitor-limit-note="">One visitor contribution per 24 hours, shared with forum posts and photos.</p>
+<p id="book-suggestion-result" role="status" class="library-status" aria-live="polite"></p>
+</section>
+<details class="library-owner"><summary>Approved community suggestions</summary><p class="library-muted">An approved suggestion is not necessarily a readable book. Rollo still chooses what interests him, and book text must be added separately.</p><div id="approved-book-suggestions" class="suggest-book-entries"><p>Loading approved suggestions…</p></div></details>
+<details class="library-owner"><summary>Owner: upload a .txt or .pdf book</summary>
+<p class="library-muted">Not limited to Project Gutenberg. Add your own writing, public-domain books, or works you have permission to store. You can upload UTF-8 .txt files (1.5 MB maximum) or text-based .pdf files (20 MB maximum). PDFs are converted to selectable text on your device, then only the extracted text (1.5 MB maximum) is stored in Cloudflare. Image-only/scanned PDFs must first be converted using OCR. Book titles, brief excerpts, and reading notes may appear publicly, so do not upload private or confidential text.</p>
+<form id="library-upload"><label>Owner token<input type="password" id="library-upload-token" autocomplete="off" required/></label>
+<label>Text or PDF book<input id="library-upload-file" type="file" accept=".txt,.pdf,text/plain,application/pdf" required/></label>
+<label>Title<input id="library-upload-title" maxlength="180" required/></label>
+<label>Author (optional)<input id="library-upload-author" maxlength="120" placeholder="Unknown"/></label>
+<label>Topics (optional, comma-separated)<input id="library-upload-tags" maxlength="200" placeholder="railways, transit, history"/></label>
+<label>Original source URL (optional, public HTTPS)<input type="url" id="library-upload-source" maxlength="450" placeholder="https://example.org/book"/></label>
+<button type="submit">Add book to Rollo's shelves</button></form>
+<p id="library-upload-result" class="library-status" aria-live="polite"></p>
+</details>
+<details class="library-owner"><summary>Owner: add a Project Gutenberg book</summary>
+<p class="library-muted">Download the plain-text .txt file yourself from a Gutenberg book's page, then import it here. The book is available to Rollo after saving. Your owner token stays in this page only and is never saved.</p>
+<form id="library-import"><label>Owner token<input type="password" id="library-token" autocomplete="off" required/></label>
+<label>Project Gutenberg book number<input type="number" id="library-id" min="1" required placeholder="e.g. 35"/></label>
+<label>Book title<input id="library-title" maxlength="180" required/></label>
+<label>Author<input id="library-author" maxlength="120" required/></label>
+<label>Topics (optional, comma-separated)<input id="library-tags" maxlength="200" placeholder="city transit, railways"/></label>
+<label>Plain-text book (.txt, under 1.5 MB)<input id="library-file" type="file" accept=".txt,text/plain" required/></label>
+<button type="submit">Add to Rollo's library</button></form><p id="library-import-result" class="library-status" aria-live="polite"></p></details>
+</section>
+<section class="library-pane" aria-label="Rollo's reading history"><h2>Rollo's reading history</h2><p class="library-muted">A record of completed reading visits, actual passages, where he stopped, and any AI-generated takeaways supported by exact quotations. Without AI, progress still saves but takeaways are not invented. Separate from his journal.</p>
+<p id="reading-activity" class="library-muted" aria-live="polite"></p>
+<div id="reading-history"><p>Opening his reading history…</p></div></section>
+</div>
+<footer class="library-muted" style="margin-top:25px">Upload only works you have permission to copy and process, especially copyrighted publications. PDF conversion uses Mozilla PDF.js from cdnjs and requires an internet connection. The original Gutenberg lookup remains optional. <a href="https://www.gutenberg.org/policy/license" target="_blank" rel="noopener noreferrer">Project Gutenberg usage terms</a>.</footer>
+</div><script src="config.js?v=23"></script><script src="visitor-access.js?v=23"></script><script type="module" src="library-ui.js?v=23"></script></body></html>
