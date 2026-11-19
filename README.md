@@ -1,7 +1,7 @@
 # Rollo's City 🦝
 ## 🌐 Live Demo
 
-**[Visit Rollo's City]([https://YOUR-SITE.netlify.app](https://dazzling-pithivier-0c7b59.netlify.app/))**
+****[Visit Rollo's City](https://dazzling-pithivier-0c7b59.netlify.app)****
 
 Explore Rollo's City, a persistent virtual world
 where an autonomous AI raccoon explores, interacts
